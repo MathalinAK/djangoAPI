@@ -1,4 +1,4 @@
-# Django REST Framework (DRF) – Complete API Notes
+# Django REST Framework (DRF) 
 
 ## What is an API?
 
