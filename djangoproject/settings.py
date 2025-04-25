@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djangoapp',
     'rest_framework',
+    'django_filters',
 
 ]
 
@@ -81,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'djangodb',
         'USER': 'postgres',
-        'PASSWORD': 'yourpassword',
+        'PASSWORD':'yourpassword',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -137,6 +138,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny', 
     ]
+}
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+
+
+    'PAGE_SIZE': 5, 
 }
 
 CORS_ALLOW_ALL_ORIGINS = True  
